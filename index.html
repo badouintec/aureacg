@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aurea Consulting Group - Transformamos empresas familiares en organizaciones de clase mundial a través de institucionalización, profesionalización y transformación digital." />
-  <title>Aurea Consulting Group | Consultoría Empresarial Especializada</title>
+  <meta name="description" content="MVM Consultores - Transformamos empresas familiares en organizaciones de clase mundial a través de institucionalización, profesionalización y transformación digital." />
+  <title>MVM Consultores | Consultoría Empresarial Especializada</title>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <!-- Font Awesome -->
@@ -14,6 +14,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="image-fallbacks.css" />
+  <link rel="stylesheet" href="animations.css" />
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -22,7 +23,7 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-container">
-      <a href="#" class="logo">Aurea Consulting</a>
+      <a href="#" class="logo"><img src="logo.png" alt="MVM Consultores" class="logo-img"> <span class="logo-text">MVM Consultores</span></a>
       <nav class="nav-menu" id="navMenu">
         <ul>
           <li><a href="#services">Servicios</a></li>
@@ -41,7 +42,7 @@
     <div class="container hero-content" data-aos="fade-up" data-aos-duration="1000">
       <h1>Transformando Empresas Familiares<br />en Organizaciones de Clase Mundial</h1>
       <p>Institucionalización. Profesionalización. Transformación Digital.</p>
-      <a href="#contact" class="btn-primary">Conversemos</a>
+      <a href="#contact" class="btn-primary" data-aos="zoom-in" data-aos-delay="800">Conversemos</a>
     </div>
   </section>
 
@@ -54,22 +55,49 @@
         <p class="section-description">Soluciones especializadas para transformar empresas familiares en organizaciones de alto rendimiento con estándares internacionales.</p>
       </div>
       <div class="cards-grid">
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-building card-icon"></i>
+        <div class="card interactive-card" data-aos="fade-up" data-aos-delay="100" style="--i:0">
+          <div class="card-icon-container">
+            <i class="fas fa-building card-icon"></i>
+            <i class="fas fa-sitemap card-icon-hover"></i>
+          </div>
           <h3>Institucionalización</h3>
           <p>Diseño de gobierno corporativo y protocolos formales de sucesión para preservar el legado familiar.</p>
+          <ul class="card-details">
+            <li><i class="fas fa-check-circle"></i> Estructura de órganos de gobierno</li>
+            <li><i class="fas fa-check-circle"></i> Protocolos familiares</li>
+            <li><i class="fas fa-check-circle"></i> Planes de sucesión</li>
+          </ul>
+          <span class="card-cta">Explorar soluciones <i class="fas fa-arrow-right"></i></span>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-chart-line card-icon"></i>
+        <div class="card interactive-card" data-aos="fade-up" data-aos-delay="200" style="--i:1">
+          <div class="card-icon-container">
+            <i class="fas fa-chart-line card-icon"></i>
+            <i class="fas fa-users-cog card-icon-hover"></i>
+          </div>
           <h3>Profesionalización</h3>
           <p>Implementación de metodologías LEAN, KPI y capacitación en liderazgo y finanzas.</p>
+          <ul class="card-details">
+            <li><i class="fas fa-check-circle"></i> Optimización de procesos LEAN</li>
+            <li><i class="fas fa-check-circle"></i> Sistemas de indicadores KPI</li>
+            <li><i class="fas fa-check-circle"></i> Desarrollo de talento gerencial</li>
+          </ul>
+          <span class="card-cta">Explorar soluciones <i class="fas fa-arrow-right"></i></span>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-laptop-code card-icon"></i>
+        <div class="card interactive-card" data-aos="fade-up" data-aos-delay="300" style="--i:2">
+          <div class="card-icon-container">
+            <i class="fas fa-laptop-code card-icon"></i>
+            <i class="fas fa-digital-tachograph card-icon-hover"></i>
+          </div>
           <h3>Transformación Digital</h3>
           <p>Integración de ERP/CRM, e-commerce y cultura digital para impulsar la competitividad.</p>
+          <ul class="card-details">
+            <li><i class="fas fa-check-circle"></i> Implementación de ERP/CRM</li>
+            <li><i class="fas fa-check-circle"></i> Desarrollo e-commerce</li>
+            <li><i class="fas fa-check-circle"></i> Análisis de datos</li>
+          </ul>
+          <span class="card-cta">Explorar soluciones <i class="fas fa-arrow-right"></i></span>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="400">
+        <div class="card" data-aos="fade-up" data-aos-delay="400" style="--i:3">
           <i class="fas fa-hand-holding-usd card-icon"></i>
           <h3>Acceso a Capital</h3>
           <p>Preparación financiera y asesoría para programas gubernamentales y co-inversiones familiares.</p>
@@ -86,20 +114,20 @@
         <h2>Panorama Económico de Sonora</h2>
         <p class="section-description">Nuestros análisis financieros y de mercado proporcionan información clave para la toma de decisiones estratégicas.</p>
       </div>
-      <div class="stats-grid">
-        <div class="stat" data-aos="fade-up" data-aos-delay="100">
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat" data-aos="fade-up" data-aos-delay="100" style="--i:0">
           <h4>PIB Estatal (2023)</h4>
           <p>840 mil millones MXN</p>
         </div>
-        <div class="stat" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat" data-aos="fade-up" data-aos-delay="200" style="--i:1">
           <h4>Crecimiento PIB</h4>
           <p>+4.9%</p>
         </div>
-        <div class="stat" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat" data-aos="fade-up" data-aos-delay="300" style="--i:2">
           <h4>Exportaciones (2024)</h4>
           <p>21,259 MDD</p>
         </div>
-        <div class="stat" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat" data-aos="fade-up" data-aos-delay="400" style="--i:3">
           <h4>Desempleo</h4>
           <p>3.57%</p>
         </div>
@@ -112,16 +140,16 @@
     <div class="container about-grid">
       <div class="about-text" data-aos="fade-right">
         <span class="section-subtitle">Nuestra firma</span>
-        <h2>Sobre Aurea Consulting</h2>
-        <p>En Aurea Consulting combinamos la tradición de la empresa familiar con metodologías de clase mundial. Nuestro enfoque 360° abarca Gobierno, Operaciones, Talento y Tecnología para garantizar resultados sostenibles y de alto impacto.</p>
+        <h2>Sobre MVM Consultores</h2>
+        <p>En MVM Consultores combinamos la tradición de la empresa familiar con metodologías de clase mundial. Nuestro enfoque 360° abarca Gobierno, Operaciones, Talento y Tecnología para garantizar resultados sostenibles y de alto impacto.</p>
         <ul>
           <li><i class="fas fa-check"></i>4 pilares integrales para una transformación holística</li>
-          <li><i class="fas fa-check"></i>Metodología AUREA-360™ con estándares internacionales</li>
+          <li><i class="fas fa-check"></i>Metodología MVM-360™ con estándares internacionales</li>
           <li><i class="fas fa-check"></i>Resultados medibles y casos de éxito locales documentados</li>
         </ul>
       </div>
       <div class="about-image" data-aos="fade-left">
-        <img src="about-image.jpg" alt="Equipo Aurea Consulting" onerror="this.src='https://via.placeholder.com/800x600/003366/FFFFFF?text=Aurea+Consulting';this.onerror='';" />
+        <img src="https://reddinconsultants.com/wp-content/uploads/2023/02/consultoria-2.jpg" alt="Equipo MVM Consultores" loading="lazy" onerror="this.src='https://via.placeholder.com/800x600/003366/FFFFFF?text=MVM+Consultores';this.onerror='';" />
       </div>
     </div>
   </section>
@@ -159,7 +187,7 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-container">
-      <p>&copy; 2025 Aurea Consulting Group. Todos los derechos reservados.</p>
+      <p>&copy; 2025 MVM Consultores. Todos los derechos reservados.</p>
       <div class="social-links">
         <a href="#"><i class="fab fa-linkedin"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
