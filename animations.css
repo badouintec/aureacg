@@ -225,3 +225,81 @@ a, button, .card, .stat, .about-image, input, textarea {
   from { width: 0 }
   to { width: 100% }
 }
+
+/* Animaciones para la sección de equipo */
+@keyframes memberHover {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.team-member::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover::after {
+  transform: scaleX(1);
+}
+
+.team-member:hover .member-info h3 {
+  animation: colorPulse 1.5s infinite alternate;
+}
+
+@keyframes colorPulse {
+  from { color: var(--primary); }
+  to { color: var(--secondary); }
+}
+
+/* Back to Top Button Animation */
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 194, 14, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(255, 194, 14, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 194, 14, 0); }
+}
+
+.back-to-top {
+  animation: pulse 2s infinite;
+}
+
+.back-to-top:hover {
+  animation: none;
+}
+
+/* Case Study Animation */
+.case-study-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.case-study-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.case-category {
+  position: relative;
+  overflow: hidden;
+}
+
+.case-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 194, 14, 0.3);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.case-study-card:hover .case-category::before {
+  transform: translateX(0);
+}
