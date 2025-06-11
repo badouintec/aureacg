@@ -3,61 +3,305 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MVM Consultores</title>
-  <!-- Stylesheet -->
+  <meta name="description" content="MVM Consultores - Transformamos empresas familiares en organizaciones de clase mundial a través de institucionalización, profesionalización y transformación digital." />
+  <title>MVM Consultores | Consultoría Empresarial Especializada</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
   <!-- Favicon -->
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <a href="#" class="logo">MVM Consultores</a>
-      <button id="menuBtn" class="menu-btn">☰</button>
-      <nav id="navMenu" class="nav-menu">
+    <div class="container header-container">
+      <a href="#" class="logo"><img src="logo.png" alt="MVM Consultores" class="logo-img"> <span class="logo-text">MVM Consultores</span></a>
+      <nav class="nav-menu" id="navMenu">
         <ul>
           <li><a href="#services">Servicios</a></li>
+          <li><a href="#insights">Insights</a></li>
           <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#team">Equipo</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Menú de navegación"><i class="fas fa-bars"></i></button>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <div class="container">
-      <h1>Transformando Empresas Familiares</h1>
-      <p>Institucionalización • Profesionalización • Transformación Digital</p>
-      <a href="#contact" class="btn-primary">Conversemos</a>
+    <div class="overlay"></div>
+    <div class="container hero-content" data-aos="fade-up" data-aos-duration="1000">
+      <h1>Transformando Empresas Familiares<br />en Organizaciones de Clase Mundial</h1>
+      <p>Institucionalización. Profesionalización. Transformación Digital.</p>
+      <a href="https://wa.me/526621234567?text=Hola,%20me%20interesa%20obtener%20información%20sobre%20los%20servicios%20de%20MVM%20Consultores" class="btn-primary" data-aos="zoom-in" data-aos-delay="800" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Conversemos</a>
     </div>
   </section>
 
   <!-- Services Section -->
   <section id="services" class="services-section">
     <div class="container">
-      <h2>Nuestros Servicios</h2>
+      <div class="section-title-container" data-aos="fade-up">
+        <span class="section-subtitle">Lo que ofrecemos</span>
+        <h2>Nuestros Servicios</h2>
+        <p class="section-description">Soluciones especializadas para transformar empresas familiares en organizaciones de alto rendimiento con estándares internacionales.</p>
+      </div>
       <div class="cards-grid">
-        <div class="card">Institucionalización</div>
-        <div class="card">Profesionalización</div>
-        <div class="card">Transformación Digital</div>
-        <div class="card">Acceso a Capital</div>
+        <div class="card interactive-card" data-aos="fade-up" data-aos-delay="100" style="--i:0" tabindex="0" role="button" aria-label="Servicio: Institucionalización">
+          <div class="card-icon-container">
+            <div class="card-icon-wrapper">
+              <i class="fas fa-building card-icon" aria-hidden="true"></i>
+              <i class="fas fa-landmark card-icon-hover" aria-hidden="true"></i>
+            </div>
+          </div>
+          <h3>Institucionalización</h3>
+          <p>Diseño de gobierno corporativo y protocolos formales de sucesión para preservar el legado familiar.</p>
+          <ul class="card-details" aria-label="Detalles del servicio">
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Estructura de órganos de gobierno</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Protocolos familiares</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Planes de sucesión</li>
+          </ul>
+          <div class="card-cta-container">
+            <span class="card-cta">Explorar soluciones <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </div>
+        <div class="card interactive-card" data-aos="fade-up" data-aos-delay="200" style="--i:1" tabindex="0" role="button" aria-label="Servicio: Profesionalización">
+          <div class="card-icon-container">
+            <div class="card-icon-wrapper">
+              <i class="fas fa-chart-line card-icon"></i>
+              <i class="fas fa-tasks card-icon-hover"></i>
+            </div>
+          </div>
+          <h3>Profesionalización</h3>
+          <p>Implementación de metodologías LEAN, KPI y capacitación en liderazgo y finanzas.</p>
+          <ul class="card-details">
+            <li><i class="fas fa-check-circle"></i> Optimización de procesos LEAN</li>
+            <li><i class="fas fa-check-circle"></i> Sistemas de indicadores KPI</li>
+            <li><i class="fas fa-check-circle"></i> Desarrollo de talento gerencial</li>
+          </ul>
+          <div class="card-cta-container">
+            <span class="card-cta">Explorar soluciones <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+        <div class="card interactive-card" data-aos="fade-up" data-aos-delay="300" style="--i:2" tabindex="0" role="button" aria-label="Servicio: Transformación Digital">
+          <div class="card-icon-container">
+            <div class="card-icon-wrapper">
+              <i class="fas fa-laptop-code card-icon"></i>
+              <i class="fas fa-digital-tachograph card-icon-hover"></i>
+            </div>
+          </div>
+          <h3>Transformación Digital</h3>
+          <p>Integración de ERP/CRM, e-commerce y cultura digital para impulsar la competitividad.</p>
+          <ul class="card-details">
+            <li><i class="fas fa-check-circle"></i> Implementación de ERP/CRM</li>
+            <li><i class="fas fa-check-circle"></i> Desarrollo e-commerce</li>
+            <li><i class="fas fa-check-circle"></i> Análisis de datos</li>
+          </ul>
+          <div class="card-cta-container">
+            <span class="card-cta">Explorar soluciones <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights Section -->
+  <section id="insights" class="insights-section">
+    <div class="container">
+      <div class="section-title-container" data-aos="fade-up">
+        <span class="section-subtitle">Datos estratégicos</span>
+        <h2>Panorama Económico de Sonora</h2>
+        <p class="section-description">Nuestros análisis financieros y de mercado proporcionan información clave para la toma de decisiones estratégicas.</p>
+      </div>
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat" data-aos="fade-up" data-aos-delay="100" style="--i:0">
+          <h4>PIB Estatal (2023)</h4>
+          <p>840 mil millones MXN</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="200" style="--i:1">
+          <h4>Crecimiento PIB</h4>
+          <p>+4.9%</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="300" style="--i:2">
+          <h4>Exportaciones (2024)</h4>
+          <p>21,259 MDD</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="400" style="--i:3">
+          <h4>Desempleo</h4>
+          <p>3.57%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div class="about-text" data-aos="fade-right">
+        <span class="section-subtitle">Nuestra firma</span>
+        <h2>Sobre MVM Consultores</h2>
+        <p>En MVM Consultores combinamos la tradición de la empresa familiar con metodologías de clase mundial. Nuestro enfoque 360° abarca Gobierno, Operaciones, Talento y Tecnología para garantizar resultados sostenibles y de alto impacto.</p>
+        <ul>
+          <li><i class="fas fa-check"></i>4 pilares integrales para una transformación holística</li>
+          <li><i class="fas fa-check"></i>Metodología MVM-360™ con estándares internacionales</li>
+          <li><i class="fas fa-check"></i>Resultados medibles y casos de éxito locales documentados</li>
+        </ul>
+      </div>
+      <div class="about-image" data-aos="fade-left">
+        <img src="about-image.jpg" alt="Equipo MVM Consultores" loading="lazy" onerror="this.src='https://reddinconsultants.com/wp-content/uploads/2023/02/consultoria-2.jpg';this.onerror='this.src=\'https://via.placeholder.com/800x600/003366/FFFFFF?text=MVM+Consultores\';';" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-title-container" data-aos="fade-up">
+        <span class="section-subtitle">Agenda una consulta</span>
+        <h2>Contáctanos</h2>
+        <p class="section-description">Estamos listos para escuchar tus necesidades y proponer soluciones estratégicas adaptadas a tu empresa.</p>
+      </div>
+      <div class="contact-cta" data-aos="fade-up" data-aos-delay="200">
+        <div class="contact-description">
+          <p>En MVM Consultores entendemos la importancia de una comunicación directa y personalizada. Nuestro equipo de expertos está listo para atender tus consultas y brindarte soluciones a medida para tu empresa.</p>
+          <p class="contact-highlight">Obtén una consulta inicial gratuita de 30 minutos para analizar las necesidades específicas de tu empresa familiar.</p>
+        </div>
+        <a href="https://wa.me/526621234567?text=Hola,%20me%20interesa%20obtener%20información%20sobre%20los%20servicios%20de%20MVM%20Consultores" class="whatsapp-button" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Conversemos por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team-section">
+    <div class="container">
+      <div class="section-title-container" data-aos="fade-up">
+        <span class="section-subtitle">Nuestros expertos</span>
+        <h2>Conoce al equipo</h2>
+        <p class="section-description">Profesionales con amplia experiencia en consultoría y transformación organizacional de empresas familiares.</p>
+      </div>
+      
+      <div class="team-grid">
+        <!-- Miembro del equipo 1 -->
+        <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+          <div class="member-image">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="Carlos Mendoza">
+          </div>
+          <div class="member-info">
+            <h3>Carlos Mendoza</h3>
+            <p class="member-position">Director General</p>
+            <p class="member-bio">Especialista en institucionalización de empresas familiares con más de 15 años de experiencia en consultoría estratégica.</p>
+            <div class="member-social">
+              <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn de Carlos Mendoza">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Miembro del equipo 2 -->
+        <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+          <div class="member-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80" alt="Ana González">
+          </div>
+          <div class="member-info">
+            <h3>Ana González</h3>
+            <p class="member-position">Directora de Transformación Digital</p>
+            <p class="member-bio">Experta en implementación de tecnologías de la información y procesos de transformación digital para empresas familiares.</p>
+            <div class="member-social">
+              <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn de Ana González">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Miembro del equipo 3 -->
+        <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+          <div class="member-image">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="Roberto Vázquez">
+          </div>
+          <div class="member-info">
+            <h3>Roberto Vázquez</h3>
+            <p class="member-position">Director Financiero</p>
+            <p class="member-bio">Especialista en desarrollo de estructuras financieras y acceso a capital para empresas familiares en crecimiento.</p>
+            <div class="member-social">
+              <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn de Roberto Vázquez">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2023 MVM Consultores. Todos los derechos reservados.</p>
+    <div class="footer-main">
+      <div class="container footer-content">
+        <div class="footer-logo">
+          <img src="logo.png" alt="MVM Consultores" class="footer-logo-img">
+          <p class="footer-tagline">Transformando empresas familiares en organizaciones de clase mundial</p>
+        </div>
+        
+        <div class="footer-info">
+          <div class="footer-contact">
+            <h4>Contáctanos</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Blvd. Morelos 177, Hermosillo, Sonora</p>
+            <p><i class="fas fa-phone"></i> (662) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@mvmconsultores.com.mx</p>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#insights">Insights</a></li>
+              <li><a href="#about">Sobre Nosotros</a></li>
+              <li><a href="#team">Equipo</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-social">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 MVM Consultores. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="#">Términos y condiciones</a>
+          <a href="#">Política de privacidad</a>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Back to Top -->
-  <a href="#" id="backToTop" class="back-to-top">↑</a>
+  <!-- Back to Top Button -->
+  <a href="#" id="backToTop" class="back-to-top" aria-label="Volver arriba"><i class="fas fa-chevron-up"></i></a>
 
-  <!-- Script -->
-  <script src="script.js"></script>
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Custom Scripts -->
+  <script src="scripts.js"></script>
 </body>
 </html>
